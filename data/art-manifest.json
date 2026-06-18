@@ -1,4 +1,224 @@
 {
+  "alyssum": {
+    "catalog": {
+      "href": "catalog/alyssum.png",
+      "w": 97,
+      "h": 120,
+      "px": {
+        "w": 740,
+        "h": 912
+      }
+    },
+    "container": {
+      "href": "plants/alyssum.png",
+      "w": 92,
+      "h": 175,
+      "px": {
+        "w": 725,
+        "h": 1381
+      }
+    }
+  },
+  "angelonia": {
+    "catalog": {
+      "href": "catalog/angelonia.png",
+      "w": 69,
+      "h": 120,
+      "px": {
+        "w": 599,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/angelonia.png",
+      "w": 91,
+      "h": 200,
+      "px": {
+        "w": 649,
+        "h": 1422
+      }
+    }
+  },
+  "bacopa": {
+    "catalog": {
+      "href": "catalog/bacopa.png",
+      "w": 120,
+      "h": 120,
+      "px": {
+        "w": 1044,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/bacopa.png",
+      "w": 88,
+      "h": 175,
+      "px": {
+        "w": 697,
+        "h": 1385
+      }
+    }
+  },
+  "basil": {
+    "catalog": {
+      "href": "catalog/basil.png",
+      "w": 97,
+      "h": 120,
+      "px": {
+        "w": 757,
+        "h": 936
+      }
+    },
+    "container": {
+      "href": "plants/basil.png",
+      "w": 154,
+      "h": 150,
+      "px": {
+        "w": 890,
+        "h": 867
+      }
+    }
+  },
+  "begonia": {
+    "catalog": {
+      "href": "catalog/begonia.png",
+      "w": 120,
+      "h": 120,
+      "px": {
+        "w": 1044,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/begonia.png",
+      "w": 146,
+      "h": 150,
+      "px": {
+        "w": 942,
+        "h": 969
+      }
+    }
+  },
+  "bidens": {
+    "catalog": {
+      "href": "catalog/bidens.png",
+      "w": 92,
+      "h": 120,
+      "px": {
+        "w": 759,
+        "h": 995
+      }
+    },
+    "container": {
+      "href": "plants/bidens.png",
+      "w": 88,
+      "h": 175,
+      "px": {
+        "w": 724,
+        "h": 1447
+      }
+    }
+  },
+  "boxwood": {
+    "catalog": {
+      "href": "catalog/boxwood.png",
+      "w": 73,
+      "h": 120,
+      "px": {
+        "w": 633,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/boxwood.png",
+      "w": 76,
+      "h": 200,
+      "px": {
+        "w": 544,
+        "h": 1441
+      }
+    }
+  },
+  "buddleia": {
+    "catalog": {
+      "href": "catalog/buddleia.png",
+      "w": 75,
+      "h": 120,
+      "px": {
+        "w": 647,
+        "h": 1035
+      }
+    },
+    "container": {
+      "href": "plants/buddleia.png",
+      "w": 64,
+      "h": 200,
+      "px": {
+        "w": 490,
+        "h": 1532
+      }
+    }
+  },
+  "caladium": {
+    "catalog": {
+      "href": "catalog/caladium.png",
+      "w": 91,
+      "h": 120,
+      "px": {
+        "w": 791,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/caladium.png",
+      "w": 98,
+      "h": 200,
+      "px": {
+        "w": 693,
+        "h": 1418
+      }
+    }
+  },
+  "calibrachoa": {
+    "catalog": {
+      "href": "catalog/calibrachoa.png",
+      "w": 122,
+      "h": 120,
+      "px": {
+        "w": 887,
+        "h": 873
+      }
+    },
+    "container": {
+      "href": "plants/calibrachoa.png",
+      "w": 94,
+      "h": 175,
+      "px": {
+        "w": 803,
+        "h": 1488
+      }
+    }
+  },
+  "calla": {
+    "catalog": {
+      "href": "catalog/calla.png",
+      "w": 81,
+      "h": 120,
+      "px": {
+        "w": 709,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/calla.png",
+      "w": 91,
+      "h": 200,
+      "px": {
+        "w": 660,
+        "h": 1455
+      }
+    }
+  },
   "canna": {
     "catalog": {
       "href": "catalog/canna.png",
@@ -16,6 +236,26 @@
       "px": {
         "w": 610,
         "h": 1446
+      }
+    }
+  },
+  "celosia": {
+    "catalog": {
+      "href": "catalog/celosia.png",
+      "w": 101,
+      "h": 120,
+      "px": {
+        "w": 880,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/celosia.png",
+      "w": 104,
+      "h": 200,
+      "px": {
+        "w": 750,
+        "h": 1444
       }
     }
   },
@@ -39,6 +279,686 @@
       }
     }
   },
+  "cordyline": {
+    "catalog": {
+      "href": "catalog/cordyline.png",
+      "w": 118,
+      "h": 120,
+      "px": {
+        "w": 975,
+        "h": 994
+      }
+    },
+    "container": {
+      "href": "plants/cordyline.png",
+      "w": 120,
+      "h": 200,
+      "px": {
+        "w": 858,
+        "h": 1425
+      }
+    }
+  },
+  "cosmos": {
+    "catalog": {
+      "href": "catalog/cosmos.png",
+      "w": 86,
+      "h": 120,
+      "px": {
+        "w": 743,
+        "h": 1034
+      }
+    },
+    "container": {
+      "href": "plants/cosmos.png",
+      "w": 98,
+      "h": 200,
+      "px": {
+        "w": 684,
+        "h": 1395
+      }
+    }
+  },
+  "creepingjenny": {
+    "catalog": {
+      "href": "catalog/creepingjenny.png",
+      "w": 116,
+      "h": 120,
+      "px": {
+        "w": 882,
+        "h": 916
+      }
+    },
+    "container": {
+      "href": "plants/creepingjenny.png",
+      "w": 93,
+      "h": 175,
+      "px": {
+        "w": 734,
+        "h": 1384
+      }
+    }
+  },
+  "dahlia": {
+    "catalog": {
+      "href": "catalog/dahlia.png",
+      "w": 91,
+      "h": 120,
+      "px": {
+        "w": 794,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/dahlia.png",
+      "w": 81,
+      "h": 200,
+      "px": {
+        "w": 573,
+        "h": 1422
+      }
+    }
+  },
+  "dichondra": {
+    "catalog": {
+      "href": "catalog/dichondra.png",
+      "w": 91,
+      "h": 120,
+      "px": {
+        "w": 687,
+        "h": 905
+      }
+    },
+    "container": {
+      "href": "plants/dichondra.png",
+      "w": 73,
+      "h": 175,
+      "px": {
+        "w": 603,
+        "h": 1436
+      }
+    }
+  },
+  "dracaena": {
+    "catalog": {
+      "href": "catalog/dracaena.png",
+      "w": 41,
+      "h": 120,
+      "px": {
+        "w": 349,
+        "h": 1021
+      }
+    },
+    "container": {
+      "href": "plants/dracaena.png",
+      "w": 129,
+      "h": 200,
+      "px": {
+        "w": 931,
+        "h": 1443
+      }
+    }
+  },
+  "dustymiller": {
+    "catalog": {
+      "href": "catalog/dustymiller.png",
+      "w": 75,
+      "h": 120,
+      "px": {
+        "w": 630,
+        "h": 1006
+      }
+    },
+    "container": {
+      "href": "plants/dustymiller.png",
+      "w": 162,
+      "h": 150,
+      "px": {
+        "w": 877,
+        "h": 811
+      }
+    }
+  },
+  "euphorbia": {
+    "catalog": {
+      "href": "catalog/euphorbia.png",
+      "w": 108,
+      "h": 120,
+      "px": {
+        "w": 834,
+        "h": 928
+      }
+    },
+    "container": {
+      "href": "plants/euphorbia.png",
+      "w": 90,
+      "h": 175,
+      "px": {
+        "w": 722,
+        "h": 1398
+      }
+    }
+  },
+  "fig": {
+    "catalog": {
+      "href": "catalog/fig.png",
+      "w": 95,
+      "h": 120,
+      "px": {
+        "w": 809,
+        "h": 1023
+      }
+    },
+    "container": {
+      "href": "plants/fig.png",
+      "w": 106,
+      "h": 200,
+      "px": {
+        "w": 787,
+        "h": 1489
+      }
+    }
+  },
+  "fountaingrass": {
+    "catalog": {
+      "href": "catalog/fountaingrass.png",
+      "w": 97,
+      "h": 120,
+      "px": {
+        "w": 777,
+        "h": 965
+      }
+    },
+    "container": {
+      "href": "plants/fountaingrass.png",
+      "w": 111,
+      "h": 200,
+      "px": {
+        "w": 822,
+        "h": 1475
+      }
+    }
+  },
+  "fuchsia": {
+    "catalog": {
+      "href": "catalog/fuchsia.png",
+      "w": 97,
+      "h": 120,
+      "px": {
+        "w": 843,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/fuchsia.png",
+      "w": 99,
+      "h": 175,
+      "px": {
+        "w": 831,
+        "h": 1473
+      }
+    }
+  },
+  "geranium": {
+    "catalog": {
+      "href": "catalog/geranium.png",
+      "w": 98,
+      "h": 120,
+      "px": {
+        "w": 825,
+        "h": 1013
+      }
+    },
+    "container": {
+      "href": "plants/geranium.png",
+      "w": 104,
+      "h": 150,
+      "px": {
+        "w": 867,
+        "h": 1256
+      }
+    }
+  },
+  "gerbera": {
+    "catalog": {
+      "href": "catalog/gerbera.png",
+      "w": 87,
+      "h": 120,
+      "px": {
+        "w": 758,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/gerbera.png",
+      "w": 128,
+      "h": 150,
+      "px": {
+        "w": 897,
+        "h": 1053
+      }
+    }
+  },
+  "gomphrena": {
+    "catalog": {
+      "href": "catalog/gomphrena.png",
+      "w": 79,
+      "h": 120,
+      "px": {
+        "w": 691,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/gomphrena.png",
+      "w": 62,
+      "h": 200,
+      "px": {
+        "w": 445,
+        "h": 1433
+      }
+    }
+  },
+  "helichrysum": {
+    "catalog": {
+      "href": "catalog/helichrysum.png",
+      "w": 53,
+      "h": 120,
+      "px": {
+        "w": 464,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/helichrysum.png",
+      "w": 72,
+      "h": 175,
+      "px": {
+        "w": 595,
+        "h": 1441
+      }
+    }
+  },
+  "heuchera": {
+    "catalog": {
+      "href": "catalog/heuchera.png",
+      "w": 94,
+      "h": 120,
+      "px": {
+        "w": 743,
+        "h": 944
+      }
+    },
+    "container": {
+      "href": "plants/heuchera.png",
+      "w": 107,
+      "h": 150,
+      "px": {
+        "w": 893,
+        "h": 1248
+      }
+    }
+  },
+  "hibiscus": {
+    "catalog": {
+      "href": "catalog/hibiscus.png",
+      "w": 109,
+      "h": 120,
+      "px": {
+        "w": 820,
+        "h": 901
+      }
+    },
+    "container": {
+      "href": "plants/hibiscus.png",
+      "w": 76,
+      "h": 200,
+      "px": {
+        "w": 573,
+        "h": 1499
+      }
+    }
+  },
+  "hydrangea": {
+    "catalog": {
+      "href": "catalog/hydrangea.png",
+      "w": 76,
+      "h": 120,
+      "px": {
+        "w": 606,
+        "h": 959
+      }
+    },
+    "container": {
+      "href": "plants/hydrangea.png",
+      "w": 66,
+      "h": 200,
+      "px": {
+        "w": 469,
+        "h": 1412
+      }
+    }
+  },
+  "impatiens": {
+    "catalog": {
+      "href": "catalog/impatiens.png",
+      "w": 135,
+      "h": 120,
+      "px": {
+        "w": 973,
+        "h": 867
+      }
+    },
+    "container": {
+      "href": "plants/impatiens.png",
+      "w": 142,
+      "h": 150,
+      "px": {
+        "w": 956,
+        "h": 1008
+      }
+    }
+  },
+  "impatienswal": {
+    "catalog": {
+      "href": "catalog/impatienswal.png",
+      "w": 117,
+      "h": 120,
+      "px": {
+        "w": 911,
+        "h": 932
+      }
+    },
+    "container": {
+      "href": "plants/impatienswal.png",
+      "w": 142,
+      "h": 150,
+      "px": {
+        "w": 924,
+        "h": 976
+      }
+    }
+  },
+  "ivy": {
+    "catalog": {
+      "href": "catalog/ivy.png",
+      "w": 114,
+      "h": 120,
+      "px": {
+        "w": 845,
+        "h": 888
+      }
+    },
+    "container": {
+      "href": "plants/ivy.png",
+      "w": 84,
+      "h": 175,
+      "px": {
+        "w": 678,
+        "h": 1418
+      }
+    }
+  },
+  "japanesemaple": {
+    "catalog": {
+      "href": "catalog/japanesemaple.png",
+      "w": 112,
+      "h": 120,
+      "px": {
+        "w": 915,
+        "h": 979
+      }
+    },
+    "container": {
+      "href": "plants/japanesemaple.png",
+      "w": 85,
+      "h": 200,
+      "px": {
+        "w": 587,
+        "h": 1380
+      }
+    }
+  },
+  "lantana": {
+    "catalog": {
+      "href": "catalog/lantana.png",
+      "w": 103,
+      "h": 120,
+      "px": {
+        "w": 779,
+        "h": 911
+      }
+    },
+    "container": {
+      "href": "plants/lantana.png",
+      "w": 88,
+      "h": 175,
+      "px": {
+        "w": 700,
+        "h": 1397
+      }
+    }
+  },
+  "lavender": {
+    "catalog": {
+      "href": "catalog/lavender.png",
+      "w": 80,
+      "h": 120,
+      "px": {
+        "w": 613,
+        "h": 920
+      }
+    },
+    "container": {
+      "href": "plants/lavender.png",
+      "w": 85,
+      "h": 200,
+      "px": {
+        "w": 597,
+        "h": 1401
+      }
+    }
+  },
+  "lobelia": {
+    "catalog": {
+      "href": "catalog/lobelia.png",
+      "w": 93,
+      "h": 120,
+      "px": {
+        "w": 808,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/lobelia.png",
+      "w": 82,
+      "h": 175,
+      "px": {
+        "w": 684,
+        "h": 1464
+      }
+    }
+  },
+  "mandevilla": {
+    "catalog": {
+      "href": "catalog/mandevilla.png",
+      "w": 87,
+      "h": 120,
+      "px": {
+        "w": 754,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/mandevilla.png",
+      "w": 84,
+      "h": 200,
+      "px": {
+        "w": 621,
+        "h": 1482
+      }
+    }
+  },
+  "marigold": {
+    "catalog": {
+      "href": "catalog/marigold.png",
+      "w": 98,
+      "h": 120,
+      "px": {
+        "w": 830,
+        "h": 1021
+      }
+    },
+    "container": {
+      "href": "plants/marigold.png",
+      "w": 127,
+      "h": 150,
+      "px": {
+        "w": 928,
+        "h": 1096
+      }
+    }
+  },
+  "meyerlemon": {
+    "catalog": {
+      "href": "catalog/meyerlemon.png",
+      "w": 96,
+      "h": 120,
+      "px": {
+        "w": 789,
+        "h": 985
+      }
+    },
+    "container": {
+      "href": "plants/meyerlemon.png",
+      "w": 95,
+      "h": 200,
+      "px": {
+        "w": 676,
+        "h": 1424
+      }
+    }
+  },
+  "millet": {
+    "catalog": {
+      "href": "catalog/millet.png",
+      "w": 81,
+      "h": 120,
+      "px": {
+        "w": 707,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/millet.png",
+      "w": 103,
+      "h": 200,
+      "px": {
+        "w": 781,
+        "h": 1510
+      }
+    }
+  },
+  "nasturtium": {
+    "catalog": {
+      "href": "catalog/nasturtium.png",
+      "w": 103,
+      "h": 120,
+      "px": {
+        "w": 861,
+        "h": 1001
+      }
+    },
+    "container": {
+      "href": "plants/nasturtium.png",
+      "w": 95,
+      "h": 175,
+      "px": {
+        "w": 780,
+        "h": 1434
+      }
+    }
+  },
+  "osteospermum": {
+    "catalog": {
+      "href": "catalog/osteospermum.png",
+      "w": 90,
+      "h": 120,
+      "px": {
+        "w": 755,
+        "h": 1008
+      }
+    },
+    "container": {
+      "href": "plants/osteospermum.png",
+      "w": 150,
+      "h": 150,
+      "px": {
+        "w": 876,
+        "h": 876
+      }
+    }
+  },
+  "pansy": {
+    "catalog": {
+      "href": "catalog/pansy.png",
+      "w": 97,
+      "h": 120,
+      "px": {
+        "w": 786,
+        "h": 971
+      }
+    },
+    "container": {
+      "href": "plants/pansy.png",
+      "w": 134,
+      "h": 150,
+      "px": {
+        "w": 864,
+        "h": 966
+      }
+    }
+  },
+  "papyrus": {
+    "catalog": {
+      "href": "catalog/papyrus.png",
+      "w": 96,
+      "h": 120,
+      "px": {
+        "w": 837,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/papyrus.png",
+      "w": 99,
+      "h": 200,
+      "px": {
+        "w": 719,
+        "h": 1458
+      }
+    }
+  },
+  "persianshield": {
+    "catalog": {
+      "href": "catalog/persianshield.png",
+      "w": 68,
+      "h": 120,
+      "px": {
+        "w": 580,
+        "h": 1025
+      }
+    },
+    "container": {
+      "href": "plants/persianshield.png",
+      "w": 93,
+      "h": 200,
+      "px": {
+        "w": 664,
+        "h": 1435
+      }
+    }
+  },
   "petunia": {
     "catalog": {
       "href": "catalog/petunia.png",
@@ -56,6 +976,246 @@
       "px": {
         "w": 810,
         "h": 1466
+      }
+    }
+  },
+  "rosemary": {
+    "catalog": {
+      "href": "catalog/rosemary.png",
+      "w": 90,
+      "h": 120,
+      "px": {
+        "w": 785,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/rosemary.png",
+      "w": 82,
+      "h": 175,
+      "px": {
+        "w": 670,
+        "h": 1434
+      }
+    }
+  },
+  "salvia": {
+    "catalog": {
+      "href": "catalog/salvia.png",
+      "w": 81,
+      "h": 120,
+      "px": {
+        "w": 681,
+        "h": 1010
+      }
+    },
+    "container": {
+      "href": "plants/salvia.png",
+      "w": 69,
+      "h": 200,
+      "px": {
+        "w": 510,
+        "h": 1489
+      }
+    }
+  },
+  "scaevola": {
+    "catalog": {
+      "href": "catalog/scaevola.png",
+      "w": 98,
+      "h": 120,
+      "px": {
+        "w": 682,
+        "h": 832
+      }
+    },
+    "container": {
+      "href": "plants/scaevola.png",
+      "w": 98,
+      "h": 175,
+      "px": {
+        "w": 807,
+        "h": 1441
+      }
+    }
+  },
+  "sedum": {
+    "catalog": {
+      "href": "catalog/sedum.png",
+      "w": 85,
+      "h": 120,
+      "px": {
+        "w": 738,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/sedum.png",
+      "w": 75,
+      "h": 200,
+      "px": {
+        "w": 521,
+        "h": 1395
+      }
+    }
+  },
+  "snapdragon": {
+    "catalog": {
+      "href": "catalog/snapdragon.png",
+      "w": 58,
+      "h": 120,
+      "px": {
+        "w": 506,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/snapdragon.png",
+      "w": 57,
+      "h": 200,
+      "px": {
+        "w": 419,
+        "h": 1475
+      }
+    }
+  },
+  "sweetpotato": {
+    "catalog": {
+      "href": "catalog/sweetpotato.png",
+      "w": 77,
+      "h": 120,
+      "px": {
+        "w": 664,
+        "h": 1033
+      }
+    },
+    "container": {
+      "href": "plants/sweetpotato.png",
+      "w": 81,
+      "h": 175,
+      "px": {
+        "w": 683,
+        "h": 1474
+      }
+    }
+  },
+  "thyme": {
+    "catalog": {
+      "href": "catalog/thyme.png",
+      "w": 55,
+      "h": 120,
+      "px": {
+        "w": 470,
+        "h": 1023
+      }
+    },
+    "container": {
+      "href": "plants/thyme.png",
+      "w": 86,
+      "h": 175,
+      "px": {
+        "w": 670,
+        "h": 1371
+      }
+    }
+  },
+  "torenia": {
+    "catalog": {
+      "href": "catalog/torenia.png",
+      "w": 94,
+      "h": 120,
+      "px": {
+        "w": 708,
+        "h": 902
+      }
+    },
+    "container": {
+      "href": "plants/torenia.png",
+      "w": 85,
+      "h": 175,
+      "px": {
+        "w": 710,
+        "h": 1465
+      }
+    }
+  },
+  "verbena": {
+    "catalog": {
+      "href": "catalog/verbena.png",
+      "w": 100,
+      "h": 120,
+      "px": {
+        "w": 757,
+        "h": 909
+      }
+    },
+    "container": {
+      "href": "plants/verbena.png",
+      "w": 68,
+      "h": 175,
+      "px": {
+        "w": 564,
+        "h": 1443
+      }
+    }
+  },
+  "vinca": {
+    "catalog": {
+      "href": "catalog/vinca.png",
+      "w": 93,
+      "h": 120,
+      "px": {
+        "w": 742,
+        "h": 955
+      }
+    },
+    "container": {
+      "href": "plants/vinca.png",
+      "w": 167,
+      "h": 150,
+      "px": {
+        "w": 933,
+        "h": 837
+      }
+    }
+  },
+  "waxbegonia": {
+    "catalog": {
+      "href": "catalog/waxbegonia.png",
+      "w": 100,
+      "h": 120,
+      "px": {
+        "w": 867,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/waxbegonia.png",
+      "w": 136,
+      "h": 150,
+      "px": {
+        "w": 903,
+        "h": 996
+      }
+    }
+  },
+  "zinnia": {
+    "catalog": {
+      "href": "catalog/zinnia.png",
+      "w": 88,
+      "h": 120,
+      "px": {
+        "w": 755,
+        "h": 1030
+      }
+    },
+    "container": {
+      "href": "plants/zinnia.png",
+      "w": 149,
+      "h": 150,
+      "px": {
+        "w": 970,
+        "h": 979
       }
     }
   }
