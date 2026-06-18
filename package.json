@@ -1,0 +1,20 @@
+{
+  "name": "container-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Container Studio — generates two illustrations per plant (a flat seed-packet catalogue icon and a naturalistic in-pot growth-habit image) from a plant catalogue using OpenAI's image model.",
+  "scripts": {
+    "generate": "node tools/generate-art.mjs",
+    "generate:all": "node tools/generate-art.mjs --all",
+    "generate:sample": "node tools/generate-art.mjs canna petunia coleus --quality medium"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.67.0",
+    "sharp": "^0.33.5"
+  }
+}

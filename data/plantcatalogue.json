@@ -1,0 +1,2234 @@
+{
+  "meta": {
+    "project": "The Container Studio",
+    "purpose": "TWO illustrations per plant: a flat iconic CATALOGUE (seed-packet) image, and a naturalistic IN-POT (growth-habit) image. Same plant, two styles, swapped by context.",
+    "styles": {
+      "catalogue": {
+        "use": "the plant catalogue card (the \"seed packet\")",
+        "look": "flat, painterly, iconic — bold simplified gouache + coloured-pencil with a soft paper texture; a SINGLE hero bloom (or one characterful leaf/sprig for foliage plants), saturated yet gentle; decorative, in the spirit of a modern seed-packet / field-guide icon",
+        "framing": "one specimen element centred, generous margin, on a FULLY TRANSPARENT background — no circle, no pot, no soil, no text, no label, no shadow",
+        "output": "PNG with alpha, ~1024×1024",
+        "filename": "catalog/<id>.png  (register with GardenArt.setCatalogImage)"
+      },
+      "container": {
+        "use": "the plant as it appears planted in the pot",
+        "look": "naturalistic botanical field-guide illustration of the WHOLE plant in its growth habit, soft realistic shading and fine veining (matches the existing salvia / coleus / calibrachoa art)",
+        "framing": "whole plant, head-on side view, role-shaped (thriller upright / filler mound / spiller trailing), vertically centred, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow",
+        "output": "PNG with alpha, ~1024×1536 portrait (spillers may be taller)",
+        "filename": "plants/<id>.png  (register with GardenArt.setContainerImage)"
+      }
+    },
+    "roleForms": {
+      "thrill": "upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide",
+      "fill": "mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall",
+      "spill": "trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim"
+    },
+    "pipeline": [
+      "For each plant generate BOTH images (catalogue + container) on transparent backgrounds.",
+      "Trim each to its content bounds (~10px pad).",
+      "Save container art to plants/<id>.png and catalogue art to catalog/<id>.png.",
+      "Register: GardenArt.setContainerImage(id,{href,w,h}) and GardenArt.setCatalogImage(id,{href,w,h}); w/h are design units preserving the trimmed aspect (container thriller h≈200, filler h≈150, spiller h≈175)."
+    ],
+    "reference": "salvia, coleus and calibrachoa already exist in the CONTAINER style — match them for the in-pot art."
+  },
+  "count": 61,
+  "plants": [
+    {
+      "id": "canna",
+      "commonName": "Canna Lily",
+      "cultivar": "Tropicanna",
+      "botanicalName": "Canna ×generalis",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "high",
+      "vigor": "high",
+      "interest": [
+        "foliage",
+        "flower"
+      ],
+      "colors": [
+        "orange",
+        "burgundy"
+      ],
+      "colorNames": [
+        "Orange",
+        "Burgundy"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 8,
+      "feature": "Paddle leaves striped bronze & orange; flares of tropical flame above.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Canna Lily (cultivar ‘Tropicanna’), Canna ×generalis: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: orange, burgundy. Paddle leaves striped bronze & orange; flares of tropical flame above. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Canna Lily (cultivar ‘Tropicanna’), Canna ×generalis, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Paddle leaves striped bronze & orange; flares of tropical flame above. Key colours: orange, burgundy. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "salvia",
+      "commonName": "Salvia",
+      "cultivar": "Black & Blue",
+      "botanicalName": "Salvia guaranitica",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "blue",
+        "plum"
+      ],
+      "colorNames": [
+        "Blue",
+        "Plum"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 8,
+      "feature": "Cobalt spires on near-black stems; hummingbirds line up for it.",
+      "containerDone": true,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Salvia (cultivar ‘Black & Blue’), Salvia guaranitica: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: blue, plum. Cobalt spires on near-black stems; hummingbirds line up for it. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Salvia (cultivar ‘Black & Blue’), Salvia guaranitica, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Cobalt spires on near-black stems; hummingbirds line up for it. Key colours: blue, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "fountaingrass",
+      "commonName": "Fountain Grass",
+      "cultivar": "Rubrum",
+      "botanicalName": "Pennisetum setaceum",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "burgundy",
+        "rose"
+      ],
+      "colorNames": [
+        "Burgundy",
+        "Rose"
+      ],
+      "bloomMonths": [
+        8,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "Burgundy blades arch into smoky foxtail plumes — pure movement.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Fountain Grass (cultivar ‘Rubrum’), Pennisetum setaceum: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: burgundy, rose. Burgundy blades arch into smoky foxtail plumes — pure movement. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Fountain Grass (cultivar ‘Rubrum’), Pennisetum setaceum, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Burgundy blades arch into smoky foxtail plumes — pure movement. Key colours: burgundy, rose. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "angelonia",
+      "commonName": "Angelonia",
+      "cultivar": "Archangel",
+      "botanicalName": "Angelonia angustifolia",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "white"
+      ],
+      "colorNames": [
+        "Violet",
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "The \"summer snapdragon\" — orchid-like spikes that shrug off heat.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Angelonia (cultivar ‘Archangel’), Angelonia angustifolia: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, white. The \"summer snapdragon\" — orchid-like spikes that shrug off heat. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Angelonia (cultivar ‘Archangel’), Angelonia angustifolia, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. The \"summer snapdragon\" — orchid-like spikes that shrug off heat. Key colours: violet, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "cordyline",
+      "commonName": "Cordyline",
+      "cultivar": "Red Star",
+      "botanicalName": "Cordyline australis",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "burgundy",
+        "plum"
+      ],
+      "colorNames": [
+        "Burgundy",
+        "Plum"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 9,
+      "feature": "A burgundy starburst of sword leaves — instant architecture.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Cordyline (cultivar ‘Red Star’), Cordyline australis: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: burgundy, plum. A burgundy starburst of sword leaves — instant architecture. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Cordyline (cultivar ‘Red Star’), Cordyline australis, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. A burgundy starburst of sword leaves — instant architecture. Key colours: burgundy, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "snapdragon",
+      "commonName": "Snapdragon",
+      "cultivar": "Rocket",
+      "botanicalName": "Antirrhinum majus",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "rose",
+        "gold"
+      ],
+      "colorNames": [
+        "Rose",
+        "Gold"
+      ],
+      "bloomMonths": [
+        4,
+        6
+      ],
+      "hardyZone": 7,
+      "feature": "Cool-season spires of plush dragon-jaw blooms.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Snapdragon (cultivar ‘Rocket’), Antirrhinum majus: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, gold. Cool-season spires of plush dragon-jaw blooms. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Snapdragon (cultivar ‘Rocket’), Antirrhinum majus, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Cool-season spires of plush dragon-jaw blooms. Key colours: rose, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "caladium",
+      "commonName": "Caladium",
+      "cultivar": "White Queen",
+      "botanicalName": "Caladium bicolor",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "white",
+        "rose",
+        "emerald"
+      ],
+      "colorNames": [
+        "White",
+        "Rose",
+        "Emerald"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 9,
+      "feature": "Translucent heart leaves veined in rose — lights up deep shade.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Caladium (cultivar ‘White Queen’), Caladium bicolor: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: white, rose, emerald. Translucent heart leaves veined in rose — lights up deep shade. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Caladium (cultivar ‘White Queen’), Caladium bicolor, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Translucent heart leaves veined in rose — lights up deep shade. Key colours: white, rose, emerald. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "dracaena",
+      "commonName": "Dracaena Spike",
+      "cultivar": "Spikes",
+      "botanicalName": "Dracaena indivisa",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "emerald",
+        "sage"
+      ],
+      "colorNames": [
+        "Emerald",
+        "Sage"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 9,
+      "feature": "The classic green fountain centerpiece — quiet, reliable height.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dracaena Spike (cultivar ‘Spikes’), Dracaena indivisa: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald, sage. The classic green fountain centerpiece — quiet, reliable height. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dracaena Spike (cultivar ‘Spikes’), Dracaena indivisa, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. The classic green fountain centerpiece — quiet, reliable height. Key colours: emerald, sage. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "coleus",
+      "commonName": "Coleus",
+      "cultivar": "Wizard",
+      "botanicalName": "Coleus scutellarioides",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade",
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "high",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "burgundy",
+        "lime",
+        "rose"
+      ],
+      "colorNames": [
+        "Burgundy",
+        "Lime",
+        "Rose"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 10,
+      "feature": "Stained-glass leaves in any color you fancy. Foliage royalty.",
+      "containerDone": true,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Coleus (cultivar ‘Wizard’), Coleus scutellarioides: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: burgundy, lime, rose. Stained-glass leaves in any color you fancy. Foliage royalty. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Coleus (cultivar ‘Wizard’), Coleus scutellarioides, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Stained-glass leaves in any color you fancy. Foliage royalty. Key colours: burgundy, lime, rose. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "geranium",
+      "commonName": "Geranium",
+      "cultivar": "Zonal",
+      "botanicalName": "Pelargonium ×hortorum",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "blush"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Blush"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Bold flower clusters over scalloped leaves — the cottage classic.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Geranium (cultivar ‘Zonal’), Pelargonium ×hortorum: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, blush. Bold flower clusters over scalloped leaves — the cottage classic. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Geranium (cultivar ‘Zonal’), Pelargonium ×hortorum, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Bold flower clusters over scalloped leaves — the cottage classic. Key colours: scarlet, blush. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "begonia",
+      "commonName": "Dragon Wing Begonia",
+      "cultivar": "Dragon Wing",
+      "botanicalName": "Begonia ×hybrida",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "scarlet",
+        "rose"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Glossy angel-wing leaves dripping with coral blooms.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dragon Wing Begonia (cultivar ‘Dragon Wing’), Begonia ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose. Glossy angel-wing leaves dripping with coral blooms. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dragon Wing Begonia (cultivar ‘Dragon Wing’), Begonia ×hybrida, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Glossy angel-wing leaves dripping with coral blooms. Key colours: scarlet, rose. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "petunia",
+      "commonName": "Petunia",
+      "cultivar": "Wave",
+      "botanicalName": "Petunia ×atkinsiana",
+      "role": "spill",
+      "allRoles": [
+        "fill",
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "high",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "rose",
+        "white"
+      ],
+      "colorNames": [
+        "Violet",
+        "Rose",
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Generous trumpets that mound then tumble — a workhorse.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Petunia (cultivar ‘Wave’), Petunia ×atkinsiana: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, rose, white. Generous trumpets that mound then tumble — a workhorse. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Petunia (cultivar ‘Wave’), Petunia ×atkinsiana, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Generous trumpets that mound then tumble — a workhorse. Key colours: violet, rose, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "marigold",
+      "commonName": "Marigold",
+      "cultivar": "Janie",
+      "botanicalName": "Tagetes patula",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "gold",
+        "orange"
+      ],
+      "colorNames": [
+        "Gold",
+        "Orange"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Ruffled suns of gold and rust; tough, cheerful, pollinator-friendly.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Marigold (cultivar ‘Janie’), Tagetes patula: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold, orange. Ruffled suns of gold and rust; tough, cheerful, pollinator-friendly. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Marigold (cultivar ‘Janie’), Tagetes patula, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Ruffled suns of gold and rust; tough, cheerful, pollinator-friendly. Key colours: gold, orange. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "heuchera",
+      "commonName": "Coral Bells",
+      "cultivar": "Caramel",
+      "botanicalName": "Heuchera villosa",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "low",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "caramel",
+        "gold"
+      ],
+      "colorNames": [
+        "Caramel",
+        "Gold"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 4,
+      "feature": "Ruffled amber mounds that glow — a true perennial keeper.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Coral Bells (cultivar ‘Caramel’), Heuchera villosa: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: caramel, gold. Ruffled amber mounds that glow — a true perennial keeper. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Coral Bells (cultivar ‘Caramel’), Heuchera villosa, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Ruffled amber mounds that glow — a true perennial keeper. Key colours: caramel, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "dustymiller",
+      "commonName": "Dusty Miller",
+      "cultivar": "Silver Dust",
+      "botanicalName": "Jacobaea maritima",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "silver"
+      ],
+      "colorNames": [
+        "Silver"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 8,
+      "feature": "Felted silver filigree that cools and unites every color near it.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dusty Miller (cultivar ‘Silver Dust’), Jacobaea maritima: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: silver. Felted silver filigree that cools and unites every color near it. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dusty Miller (cultivar ‘Silver Dust’), Jacobaea maritima, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Felted silver filigree that cools and unites every color near it. Key colours: silver. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "lantana",
+      "commonName": "Lantana",
+      "cultivar": "Bandana",
+      "botanicalName": "Lantana camara",
+      "role": "spill",
+      "allRoles": [
+        "fill",
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "high",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "gold",
+        "coral",
+        "rose"
+      ],
+      "colorNames": [
+        "Gold",
+        "Coral",
+        "Rose"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "Confetti clusters that bake happily in heat and draw butterflies.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Lantana (cultivar ‘Bandana’), Lantana camara: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold, coral, rose. Confetti clusters that bake happily in heat and draw butterflies. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Lantana (cultivar ‘Bandana’), Lantana camara, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Confetti clusters that bake happily in heat and draw butterflies. Key colours: gold, coral, rose. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "impatiens",
+      "commonName": "New Guinea Impatiens",
+      "cultivar": "SunPatiens",
+      "botanicalName": "Impatiens hawkeri",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "rose",
+        "white"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose",
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Satiny blooms over bronzed leaves — nonstop color in shade.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of New Guinea Impatiens (cultivar ‘SunPatiens’), Impatiens hawkeri: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose, white. Satiny blooms over bronzed leaves — nonstop color in shade. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of New Guinea Impatiens (cultivar ‘SunPatiens’), Impatiens hawkeri, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Satiny blooms over bronzed leaves — nonstop color in shade. Key colours: scarlet, rose, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "thyme",
+      "commonName": "Creeping Thyme",
+      "cultivar": "Lemon",
+      "botanicalName": "Thymus citriodorus",
+      "role": "spill",
+      "allRoles": [
+        "fill",
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "herb",
+        "foliage"
+      ],
+      "colors": [
+        "sage",
+        "lime"
+      ],
+      "colorNames": [
+        "Sage",
+        "Lime"
+      ],
+      "bloomMonths": [
+        6,
+        7
+      ],
+      "hardyZone": 5,
+      "feature": "A fragrant green haze that fills, softens and seasons dinner.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Creeping Thyme (cultivar ‘Lemon’), Thymus citriodorus: a single hero sprig of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: sage, lime. A fragrant green haze that fills, softens and seasons dinner. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Creeping Thyme (cultivar ‘Lemon’), Thymus citriodorus, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A fragrant green haze that fills, softens and seasons dinner. Key colours: sage, lime. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "basil",
+      "commonName": "Basil",
+      "cultivar": "Genovese",
+      "botanicalName": "Ocimum basilicum",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "herb",
+        "foliage"
+      ],
+      "colors": [
+        "emerald",
+        "lime"
+      ],
+      "colorNames": [
+        "Emerald",
+        "Lime"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 11,
+      "feature": "Glossy aromatic mounds — beautiful, useful, smells like summer.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Basil (cultivar ‘Genovese’), Ocimum basilicum: a single hero sprig of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald, lime. Glossy aromatic mounds — beautiful, useful, smells like summer. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Basil (cultivar ‘Genovese’), Ocimum basilicum, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Glossy aromatic mounds — beautiful, useful, smells like summer. Key colours: emerald, lime. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "dichondra",
+      "commonName": "Silver Falls Dichondra",
+      "cultivar": "Silver Falls",
+      "botanicalName": "Dichondra argentea",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "silver"
+      ],
+      "colorNames": [
+        "Silver"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 10,
+      "feature": "A shimmering silver waterfall that can pour four feet down.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Silver Falls Dichondra (cultivar ‘Silver Falls’), Dichondra argentea: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: silver. A shimmering silver waterfall that can pour four feet down. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Silver Falls Dichondra (cultivar ‘Silver Falls’), Dichondra argentea, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A shimmering silver waterfall that can pour four feet down. Key colours: silver. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "sweetpotato",
+      "commonName": "Sweet Potato Vine",
+      "cultivar": "Marguerite",
+      "botanicalName": "Ipomoea batatas",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "high",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "chartreuse",
+        "lime"
+      ],
+      "colorNames": [
+        "Chartreuse",
+        "Lime"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 11,
+      "feature": "Chartreuse hearts that cascade with abandon — instant glow.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Sweet Potato Vine (cultivar ‘Marguerite’), Ipomoea batatas: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: chartreuse, lime. Chartreuse hearts that cascade with abandon — instant glow. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Sweet Potato Vine (cultivar ‘Marguerite’), Ipomoea batatas, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Chartreuse hearts that cascade with abandon — instant glow. Key colours: chartreuse, lime. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "calibrachoa",
+      "commonName": "Calibrachoa",
+      "cultivar": "Million Bells",
+      "botanicalName": "Calibrachoa ×hybrida",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "coral",
+        "violet",
+        "gold"
+      ],
+      "colorNames": [
+        "Coral",
+        "Violet",
+        "Gold"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Hundreds of mini-petunia bells, self-cleaning, endlessly blooming.",
+      "containerDone": true,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Calibrachoa (cultivar ‘Million Bells’), Calibrachoa ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: coral, violet, gold. Hundreds of mini-petunia bells, self-cleaning, endlessly blooming. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Calibrachoa (cultivar ‘Million Bells’), Calibrachoa ×hybrida, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Hundreds of mini-petunia bells, self-cleaning, endlessly blooming. Key colours: coral, violet, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "bacopa",
+      "commonName": "Bacopa",
+      "cultivar": "Snowstorm",
+      "botanicalName": "Chaenostoma cordatum",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "white"
+      ],
+      "colorNames": [
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "A fine veil of tiny white stars spilling over the rim.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Bacopa (cultivar ‘Snowstorm’), Chaenostoma cordatum: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: white. A fine veil of tiny white stars spilling over the rim. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Bacopa (cultivar ‘Snowstorm’), Chaenostoma cordatum, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A fine veil of tiny white stars spilling over the rim. Key colours: white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "creepingjenny",
+      "commonName": "Creeping Jenny",
+      "cultivar": "Aurea",
+      "botanicalName": "Lysimachia nummularia",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "high",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "gold",
+        "lime"
+      ],
+      "colorNames": [
+        "Gold",
+        "Lime"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 4,
+      "feature": "Strings of golden coins that thread between everything.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Creeping Jenny (cultivar ‘Aurea’), Lysimachia nummularia: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold, lime. Strings of golden coins that thread between everything. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Creeping Jenny (cultivar ‘Aurea’), Lysimachia nummularia, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Strings of golden coins that thread between everything. Key colours: gold, lime. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "lobelia",
+      "commonName": "Lobelia",
+      "cultivar": "Laguna",
+      "botanicalName": "Lobelia erinus",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "low",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "blue",
+        "skyblue"
+      ],
+      "colorNames": [
+        "Blue",
+        "Sky blue"
+      ],
+      "bloomMonths": [
+        5,
+        7
+      ],
+      "hardyZone": 10,
+      "feature": "A froth of true-blue — the rare cool jewel for a hot pot.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Lobelia (cultivar ‘Laguna’), Lobelia erinus: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: blue, sky blue. A froth of true-blue — the rare cool jewel for a hot pot. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Lobelia (cultivar ‘Laguna’), Lobelia erinus, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A froth of true-blue — the rare cool jewel for a hot pot. Key colours: blue, sky blue. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "verbena",
+      "commonName": "Trailing Verbena",
+      "cultivar": "Superbena",
+      "botanicalName": "Verbena ×hybrida",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "rose",
+        "violet",
+        "scarlet"
+      ],
+      "colorNames": [
+        "Rose",
+        "Violet",
+        "Scarlet"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "Flat clusters that trail and bloom through the hottest weeks.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Trailing Verbena (cultivar ‘Superbena’), Verbena ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, violet, scarlet. Flat clusters that trail and bloom through the hottest weeks. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Trailing Verbena (cultivar ‘Superbena’), Verbena ×hybrida, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Flat clusters that trail and bloom through the hottest weeks. Key colours: rose, violet, scarlet. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "ivy",
+      "commonName": "English Ivy",
+      "cultivar": "Glacier",
+      "botanicalName": "Hedera helix",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "emerald",
+        "silver"
+      ],
+      "colorNames": [
+        "Emerald",
+        "Silver"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 5,
+      "feature": "Cool variegated points that lace softly over the edge.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of English Ivy (cultivar ‘Glacier’), Hedera helix: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald, silver. Cool variegated points that lace softly over the edge. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of English Ivy (cultivar ‘Glacier’), Hedera helix, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Cool variegated points that lace softly over the edge. Key colours: emerald, silver. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "rosemary",
+      "commonName": "Trailing Rosemary",
+      "cultivar": "Prostratus",
+      "botanicalName": "Salvia rosmarinus",
+      "role": "spill",
+      "allRoles": [
+        "spill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "herb",
+        "foliage"
+      ],
+      "colors": [
+        "sage",
+        "emerald"
+      ],
+      "colorNames": [
+        "Sage",
+        "Emerald"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 8,
+      "feature": "Needled, resinous and edible — a fragrant cascade for hot, dry pots.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Trailing Rosemary (cultivar ‘Prostratus’), Salvia rosmarinus: a single hero sprig of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: sage, emerald. Needled, resinous and edible — a fragrant cascade for hot, dry pots. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Trailing Rosemary (cultivar ‘Prostratus’), Salvia rosmarinus, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Needled, resinous and edible — a fragrant cascade for hot, dry pots. Key colours: sage, emerald. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "persianshield",
+      "commonName": "Persian Shield",
+      "cultivar": "Persian Shield",
+      "botanicalName": "Strobilanthes dyerianus",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "plum",
+        "silver",
+        "emerald"
+      ],
+      "colorNames": [
+        "Plum",
+        "Silver",
+        "Emerald"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 10,
+      "feature": "Iridescent purple leaves brushed with silver — electric foliage for shade.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Persian Shield (cultivar ‘Persian Shield’), Strobilanthes dyerianus: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: plum, silver, emerald. Iridescent purple leaves brushed with silver — electric foliage for shade. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Persian Shield (cultivar ‘Persian Shield’), Strobilanthes dyerianus, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Iridescent purple leaves brushed with silver — electric foliage for shade. Key colours: plum, silver, emerald. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "celosia",
+      "commonName": "Celosia",
+      "cultivar": "Dragon’s Breath",
+      "botanicalName": "Celosia argentea",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "scarlet",
+        "burgundy"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Burgundy"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Flame-red plumes over bronzed foliage — a living bonfire.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Celosia (cultivar ‘Dragon’s Breath’), Celosia argentea: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, burgundy. Flame-red plumes over bronzed foliage — a living bonfire. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Celosia (cultivar ‘Dragon’s Breath’), Celosia argentea, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Flame-red plumes over bronzed foliage — a living bonfire. Key colours: scarlet, burgundy. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "papyrus",
+      "commonName": "Papyrus",
+      "cultivar": "King Tut",
+      "botanicalName": "Cyperus papyrus",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "high",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "emerald",
+        "lime"
+      ],
+      "colorNames": [
+        "Emerald",
+        "Lime"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 9,
+      "feature": "Green fireworks of thread-fine spokes; happiest with wet feet.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Papyrus (cultivar ‘King Tut’), Cyperus papyrus: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald, lime. Green fireworks of thread-fine spokes; happiest with wet feet. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Papyrus (cultivar ‘King Tut’), Cyperus papyrus, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Green fireworks of thread-fine spokes; happiest with wet feet. Key colours: emerald, lime. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "millet",
+      "commonName": "Ornamental Millet",
+      "cultivar": "Purple Majesty",
+      "botanicalName": "Pennisetum glaucum",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "burgundy",
+        "plum"
+      ],
+      "colorNames": [
+        "Burgundy",
+        "Plum"
+      ],
+      "bloomMonths": [
+        8,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Burgundy corn-like blades topped with dark bottlebrush spikes.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Ornamental Millet (cultivar ‘Purple Majesty’), Pennisetum glaucum: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: burgundy, plum. Burgundy corn-like blades topped with dark bottlebrush spikes. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Ornamental Millet (cultivar ‘Purple Majesty’), Pennisetum glaucum, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Burgundy corn-like blades topped with dark bottlebrush spikes. Key colours: burgundy, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "lavender",
+      "commonName": "Lavender",
+      "cultivar": "Phenomenal",
+      "botanicalName": "Lavandula ×intermedia",
+      "role": "thrill",
+      "allRoles": [
+        "fill",
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "flower",
+        "herb",
+        "foliage"
+      ],
+      "colors": [
+        "violet",
+        "sage"
+      ],
+      "colorNames": [
+        "Violet",
+        "Sage"
+      ],
+      "bloomMonths": [
+        6,
+        8
+      ],
+      "hardyZone": 5,
+      "feature": "Fragrant silver-green mounds spiked with violet wands; bee heaven.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Lavender (cultivar ‘Phenomenal’), Lavandula ×intermedia: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, sage. Fragrant silver-green mounds spiked with violet wands; bee heaven. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Lavender (cultivar ‘Phenomenal’), Lavandula ×intermedia, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Fragrant silver-green mounds spiked with violet wands; bee heaven. Key colours: violet, sage. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "zinnia",
+      "commonName": "Zinnia",
+      "cultivar": "Profusion",
+      "botanicalName": "Zinnia ×hybrida",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "coral",
+        "gold",
+        "scarlet"
+      ],
+      "colorNames": [
+        "Coral",
+        "Gold",
+        "Scarlet"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Tireless daisies that laugh at heat and feed every pollinator.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Zinnia (cultivar ‘Profusion’), Zinnia ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: coral, gold, scarlet. Tireless daisies that laugh at heat and feed every pollinator. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Zinnia (cultivar ‘Profusion’), Zinnia ×hybrida, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Tireless daisies that laugh at heat and feed every pollinator. Key colours: coral, gold, scarlet. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "vinca",
+      "commonName": "Annual Vinca",
+      "cultivar": "Cora",
+      "botanicalName": "Catharanthus roseus",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "rose",
+        "blush",
+        "white"
+      ],
+      "colorNames": [
+        "Rose",
+        "Blush",
+        "White"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Glossy leaves and pinwheel blooms that revel in heat and drought.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Annual Vinca (cultivar ‘Cora’), Catharanthus roseus: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, blush, white. Glossy leaves and pinwheel blooms that revel in heat and drought. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Annual Vinca (cultivar ‘Cora’), Catharanthus roseus, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Glossy leaves and pinwheel blooms that revel in heat and drought. Key colours: rose, blush, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "torenia",
+      "commonName": "Torenia",
+      "cultivar": "Wishbone",
+      "botanicalName": "Torenia fournieri",
+      "role": "spill",
+      "allRoles": [
+        "fill",
+        "spill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "high",
+      "vigor": "low",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "blue",
+        "blush"
+      ],
+      "colorNames": [
+        "Violet",
+        "Blue",
+        "Blush"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Velvety wishbone trumpets that keep blooming in shade.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Torenia (cultivar ‘Wishbone’), Torenia fournieri: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, blue, blush. Velvety wishbone trumpets that keep blooming in shade. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Torenia (cultivar ‘Wishbone’), Torenia fournieri, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Velvety wishbone trumpets that keep blooming in shade. Key colours: violet, blue, blush. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "osteospermum",
+      "commonName": "African Daisy",
+      "cultivar": "Osteospermum",
+      "botanicalName": "Osteospermum ecklonis",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "white",
+        "gold"
+      ],
+      "colorNames": [
+        "Violet",
+        "White",
+        "Gold"
+      ],
+      "bloomMonths": [
+        4,
+        6
+      ],
+      "hardyZone": 10,
+      "feature": "Crisp daisies with metallic eyes; brightest in cool weather.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of African Daisy (cultivar ‘Osteospermum’), Osteospermum ecklonis: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, white, gold. Crisp daisies with metallic eyes; brightest in cool weather. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of African Daisy (cultivar ‘Osteospermum’), Osteospermum ecklonis, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Crisp daisies with metallic eyes; brightest in cool weather. Key colours: violet, white, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "euphorbia",
+      "commonName": "Euphorbia",
+      "cultivar": "Diamond Frost",
+      "botanicalName": "Euphorbia hypericifolia",
+      "role": "spill",
+      "allRoles": [
+        "fill",
+        "spill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "white"
+      ],
+      "colorNames": [
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "A weightless cloud of tiny white blooms that flatters every neighbor.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Euphorbia (cultivar ‘Diamond Frost’), Euphorbia hypericifolia: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: white. A weightless cloud of tiny white blooms that flatters every neighbor. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Euphorbia (cultivar ‘Diamond Frost’), Euphorbia hypericifolia, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A weightless cloud of tiny white blooms that flatters every neighbor. Key colours: white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "bidens",
+      "commonName": "Bidens",
+      "cultivar": "Goldilocks",
+      "botanicalName": "Bidens ferulifolia",
+      "role": "spill",
+      "allRoles": [
+        "spill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "gold"
+      ],
+      "colorNames": [
+        "Gold"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "A spilling mat of gold stars that never quits in heat.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Bidens (cultivar ‘Goldilocks’), Bidens ferulifolia: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold. A spilling mat of gold stars that never quits in heat. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Bidens (cultivar ‘Goldilocks’), Bidens ferulifolia, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A spilling mat of gold stars that never quits in heat. Key colours: gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "scaevola",
+      "commonName": "Fan Flower",
+      "cultivar": "Scaevola",
+      "botanicalName": "Scaevola aemula",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "blue"
+      ],
+      "colorNames": [
+        "Violet",
+        "Blue"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Little blue fans, each splayed like a hand at the wrist.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Fan Flower (cultivar ‘Scaevola’), Scaevola aemula: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, blue. Little blue fans, each splayed like a hand at the wrist. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Fan Flower (cultivar ‘Scaevola’), Scaevola aemula, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Little blue fans, each splayed like a hand at the wrist. Key colours: violet, blue. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "alyssum",
+      "commonName": "Sweet Alyssum",
+      "cultivar": "Snow Princess",
+      "botanicalName": "Lobularia maritima",
+      "role": "spill",
+      "allRoles": [
+        "spill",
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "white"
+      ],
+      "colorNames": [
+        "White"
+      ],
+      "bloomMonths": [
+        4,
+        10
+      ],
+      "hardyZone": 9,
+      "feature": "A honey-scented carpet that froths over the rim.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Sweet Alyssum (cultivar ‘Snow Princess’), Lobularia maritima: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: white. A honey-scented carpet that froths over the rim. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Sweet Alyssum (cultivar ‘Snow Princess’), Lobularia maritima, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. A honey-scented carpet that froths over the rim. Key colours: white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "helichrysum",
+      "commonName": "Licorice Plant",
+      "cultivar": "Licorice",
+      "botanicalName": "Helichrysum petiolare",
+      "role": "spill",
+      "allRoles": [
+        "spill",
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "low",
+      "vigor": "high",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "silver",
+        "sage"
+      ],
+      "colorNames": [
+        "Silver",
+        "Sage"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 10,
+      "feature": "Felted silver leaves trailing in soft, woolly tiers.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Licorice Plant (cultivar ‘Licorice’), Helichrysum petiolare: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: silver, sage. Felted silver leaves trailing in soft, woolly tiers. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Licorice Plant (cultivar ‘Licorice’), Helichrysum petiolare, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Felted silver leaves trailing in soft, woolly tiers. Key colours: silver, sage. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "nasturtium",
+      "commonName": "Nasturtium",
+      "cultivar": "Jewel",
+      "botanicalName": "Tropaeolum majus",
+      "role": "spill",
+      "allRoles": [
+        "spill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "herb",
+        "foliage"
+      ],
+      "colors": [
+        "orange",
+        "gold",
+        "scarlet"
+      ],
+      "colorNames": [
+        "Orange",
+        "Gold",
+        "Scarlet"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Round lily-pad leaves and edible jewel-toned blooms; pepper-sweet.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Nasturtium (cultivar ‘Jewel’), Tropaeolum majus: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: orange, gold, scarlet. Round lily-pad leaves and edible jewel-toned blooms; pepper-sweet. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Nasturtium (cultivar ‘Jewel’), Tropaeolum majus, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Round lily-pad leaves and edible jewel-toned blooms; pepper-sweet. Key colours: orange, gold, scarlet. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "fuchsia",
+      "commonName": "Trailing Fuchsia",
+      "cultivar": "Swingtime",
+      "botanicalName": "Fuchsia ×hybrida",
+      "role": "spill",
+      "allRoles": [
+        "spill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "rose",
+        "plum"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose",
+        "Plum"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Pendant ballerina blooms that ring a shady balcony.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Trailing Fuchsia (cultivar ‘Swingtime’), Fuchsia ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose, plum. Pendant ballerina blooms that ring a shady balcony. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Trailing Fuchsia (cultivar ‘Swingtime’), Fuchsia ×hybrida, shown as a trailing \"spiller\" — a cascading spray that hangs downward, fullest at the crown and tapering into long trailing stems, as if draping over a pot rim. Pendant ballerina blooms that ring a shady balcony. Key colours: scarlet, rose, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "gerbera",
+      "commonName": "Gerbera Daisy",
+      "cultivar": "Garvinea",
+      "botanicalName": "Gerbera jamesonii",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "low",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "coral",
+        "gold",
+        "rose"
+      ],
+      "colorNames": [
+        "Coral",
+        "Gold",
+        "Rose"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 8,
+      "feature": "Crisp, oversized daisies in saturated candy colors.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Gerbera Daisy (cultivar ‘Garvinea’), Gerbera jamesonii: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: coral, gold, rose. Crisp, oversized daisies in saturated candy colors. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Gerbera Daisy (cultivar ‘Garvinea’), Gerbera jamesonii, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Crisp, oversized daisies in saturated candy colors. Key colours: coral, gold, rose. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "calla",
+      "commonName": "Calla Lily",
+      "cultivar": "Captain",
+      "botanicalName": "Zantedeschia",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "gold",
+        "rose",
+        "plum"
+      ],
+      "colorNames": [
+        "Gold",
+        "Rose",
+        "Plum"
+      ],
+      "bloomMonths": [
+        5,
+        8
+      ],
+      "hardyZone": 8,
+      "feature": "Sculptural furled trumpets above spear-shaped, speckled leaves.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Calla Lily (cultivar ‘Captain’), Zantedeschia: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold, rose, plum. Sculptural furled trumpets above spear-shaped, speckled leaves. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Calla Lily (cultivar ‘Captain’), Zantedeschia, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Sculptural furled trumpets above spear-shaped, speckled leaves. Key colours: gold, rose, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "cosmos",
+      "commonName": "Cosmos",
+      "cultivar": "Sonata",
+      "botanicalName": "Cosmos bipinnatus",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "rose",
+        "blush",
+        "white"
+      ],
+      "colorNames": [
+        "Rose",
+        "Blush",
+        "White"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 11,
+      "feature": "Airy ferny stems waving simple daisies — effortless cottage charm.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Cosmos (cultivar ‘Sonata’), Cosmos bipinnatus: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, blush, white. Airy ferny stems waving simple daisies — effortless cottage charm. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Cosmos (cultivar ‘Sonata’), Cosmos bipinnatus, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Airy ferny stems waving simple daisies — effortless cottage charm. Key colours: rose, blush, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "waxbegonia",
+      "commonName": "Wax Begonia",
+      "cultivar": "Cocktail",
+      "botanicalName": "Begonia semperflorens",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "rose",
+        "scarlet",
+        "white"
+      ],
+      "colorNames": [
+        "Rose",
+        "Scarlet",
+        "White"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Glossy leaves studded nonstop with little blooms; bombproof.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Wax Begonia (cultivar ‘Cocktail’), Begonia semperflorens: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, scarlet, white. Glossy leaves studded nonstop with little blooms; bombproof. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Wax Begonia (cultivar ‘Cocktail’), Begonia semperflorens, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Glossy leaves studded nonstop with little blooms; bombproof. Key colours: rose, scarlet, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "impatienswal",
+      "commonName": "Impatiens",
+      "cultivar": "Super Elfin",
+      "botanicalName": "Impatiens walleriana",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "shade",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "rose",
+        "violet"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose",
+        "Violet"
+      ],
+      "bloomMonths": [
+        5,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "The original shade workhorse — solid color where nothing else blooms.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Impatiens (cultivar ‘Super Elfin’), Impatiens walleriana: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose, violet. The original shade workhorse — solid color where nothing else blooms. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Impatiens (cultivar ‘Super Elfin’), Impatiens walleriana, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. The original shade workhorse — solid color where nothing else blooms. Key colours: scarlet, rose, violet. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "pansy",
+      "commonName": "Pansy",
+      "cultivar": "Matrix",
+      "botanicalName": "Viola ×wittrockiana",
+      "role": "fill",
+      "allRoles": [
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "medium",
+      "vigor": "low",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "gold",
+        "white"
+      ],
+      "colorNames": [
+        "Violet",
+        "Gold",
+        "White"
+      ],
+      "bloomMonths": [
+        3,
+        5
+      ],
+      "hardyZone": 7,
+      "feature": "Velvety faces for cool spring and fall; shrugs off light frost.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Pansy (cultivar ‘Matrix’), Viola ×wittrockiana: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, gold, white. Velvety faces for cool spring and fall; shrugs off light frost. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Pansy (cultivar ‘Matrix’), Viola ×wittrockiana, shown as a mounding \"filler\" — a rounded, bushy mound, fuller and wider than tall. Velvety faces for cool spring and fall; shrugs off light frost. Key colours: violet, gold, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "dahlia",
+      "commonName": "Dahlia",
+      "cultivar": "Dahlinova",
+      "botanicalName": "Dahlia ×hortensis",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "rose",
+        "gold"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose",
+        "Gold"
+      ],
+      "bloomMonths": [
+        7,
+        10
+      ],
+      "hardyZone": 8,
+      "feature": "Geometric, petal-packed blooms from midsummer to frost.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dahlia (cultivar ‘Dahlinova’), Dahlia ×hortensis: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose, gold. Geometric, petal-packed blooms from midsummer to frost. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dahlia (cultivar ‘Dahlinova’), Dahlia ×hortensis, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Geometric, petal-packed blooms from midsummer to frost. Key colours: scarlet, rose, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "hydrangea",
+      "commonName": "Dwarf Hydrangea",
+      "cultivar": "Little Lime",
+      "botanicalName": "Hydrangea paniculata",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "lime",
+        "blush",
+        "white"
+      ],
+      "colorNames": [
+        "Lime",
+        "Blush",
+        "White"
+      ],
+      "bloomMonths": [
+        7,
+        10
+      ],
+      "hardyZone": 3,
+      "feature": "Cone blooms opening lime, aging to rose — a container-sized shrub.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dwarf Hydrangea (cultivar ‘Little Lime’), Hydrangea paniculata: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: lime, blush, white. Cone blooms opening lime, aging to rose — a container-sized shrub. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dwarf Hydrangea (cultivar ‘Little Lime’), Hydrangea paniculata, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Cone blooms opening lime, aging to rose — a container-sized shrub. Key colours: lime, blush, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "fig",
+      "commonName": "Little Miss Figgy",
+      "cultivar": "Little Miss Figgy",
+      "botanicalName": "Ficus carica",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage",
+        "herb"
+      ],
+      "colors": [
+        "emerald",
+        "bronze"
+      ],
+      "colorNames": [
+        "Emerald",
+        "Bronze"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 7,
+      "feature": "A dwarf patio fig — bold lobed leaves and real, edible fruit.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Little Miss Figgy (cultivar ‘Little Miss Figgy’), Ficus carica: a single hero sprig of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald, bronze. A dwarf patio fig — bold lobed leaves and real, edible fruit. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Little Miss Figgy (cultivar ‘Little Miss Figgy’), Ficus carica, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. A dwarf patio fig — bold lobed leaves and real, edible fruit. Key colours: emerald, bronze. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "buddleia",
+      "commonName": "Dwarf Butterfly Bush",
+      "cultivar": "Lo & Behold Blue Chip",
+      "botanicalName": "Buddleja",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "high",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "violet",
+        "plum"
+      ],
+      "colorNames": [
+        "Violet",
+        "Plum"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 5,
+      "feature": "Honey-scented wands that pull in butterflies; stays compact.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dwarf Butterfly Bush (cultivar ‘Lo & Behold Blue Chip’), Buddleja: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: violet, plum. Honey-scented wands that pull in butterflies; stays compact. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dwarf Butterfly Bush (cultivar ‘Lo & Behold Blue Chip’), Buddleja, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Honey-scented wands that pull in butterflies; stays compact. Key colours: violet, plum. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "mandevilla",
+      "commonName": "Mandevilla",
+      "cultivar": "Sun Parasol",
+      "botanicalName": "Mandevilla ×hybrida",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "spill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "high",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "scarlet",
+        "rose",
+        "white"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Rose",
+        "White"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "A twining vine hung with glossy trumpet flowers; give it a stake.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Mandevilla (cultivar ‘Sun Parasol’), Mandevilla ×hybrida: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, rose, white. A twining vine hung with glossy trumpet flowers; give it a stake. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Mandevilla (cultivar ‘Sun Parasol’), Mandevilla ×hybrida, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. A twining vine hung with glossy trumpet flowers; give it a stake. Key colours: scarlet, rose, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "hibiscus",
+      "commonName": "Tropical Hibiscus",
+      "cultivar": "HibisQs",
+      "botanicalName": "Hibiscus rosa-sinensis",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "high",
+      "vigor": "medium",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "scarlet",
+        "coral",
+        "gold"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Coral",
+        "Gold"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Dinner-plate trumpets over glossy leaves — pure tropical drama.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Tropical Hibiscus (cultivar ‘HibisQs’), Hibiscus rosa-sinensis: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, coral, gold. Dinner-plate trumpets over glossy leaves — pure tropical drama. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Tropical Hibiscus (cultivar ‘HibisQs’), Hibiscus rosa-sinensis, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Dinner-plate trumpets over glossy leaves — pure tropical drama. Key colours: scarlet, coral, gold. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "japanesemaple",
+      "commonName": "Dwarf Japanese Maple",
+      "cultivar": "Crimson Queen",
+      "botanicalName": "Acer palmatum",
+      "role": "thrill",
+      "allRoles": [
+        "thrill"
+      ],
+      "light": [
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "low",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "scarlet",
+        "burgundy"
+      ],
+      "colorNames": [
+        "Scarlet",
+        "Burgundy"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 5,
+      "feature": "A weeping lace of finely cut leaves — living sculpture for a patio.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Dwarf Japanese Maple (cultivar ‘Crimson Queen’), Acer palmatum: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: scarlet, burgundy. A weeping lace of finely cut leaves — living sculpture for a patio. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Dwarf Japanese Maple (cultivar ‘Crimson Queen’), Acer palmatum, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. A weeping lace of finely cut leaves — living sculpture for a patio. Key colours: scarlet, burgundy. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "boxwood",
+      "commonName": "Boxwood",
+      "cultivar": "Green Velvet",
+      "botanicalName": "Buxus",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun",
+        "part",
+        "shade"
+      ],
+      "water": "medium",
+      "vigor": "low",
+      "interest": [
+        "foliage"
+      ],
+      "colors": [
+        "emerald"
+      ],
+      "colorNames": [
+        "Emerald"
+      ],
+      "bloomMonths": null,
+      "hardyZone": 5,
+      "feature": "Dense evergreen structure — clips into year-round formality.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Boxwood (cultivar ‘Green Velvet’), Buxus: a single hero leaf of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: emerald. Dense evergreen structure — clips into year-round formality. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Boxwood (cultivar ‘Green Velvet’), Buxus, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Dense evergreen structure — clips into year-round formality. Key colours: emerald. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "meyerlemon",
+      "commonName": "Meyer Lemon",
+      "cultivar": "Improved Meyer",
+      "botanicalName": "Citrus ×meyeri",
+      "role": "thrill",
+      "allRoles": [
+        "thrill",
+        "fill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "medium",
+      "vigor": "medium",
+      "interest": [
+        "foliage",
+        "flower",
+        "herb"
+      ],
+      "colors": [
+        "gold",
+        "emerald",
+        "white"
+      ],
+      "colorNames": [
+        "Gold",
+        "Emerald",
+        "White"
+      ],
+      "bloomMonths": [
+        3,
+        5
+      ],
+      "hardyZone": 9,
+      "feature": "Glossy evergreen with fragrant blossom and real lemons on a patio.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Meyer Lemon (cultivar ‘Improved Meyer’), Citrus ×meyeri: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: gold, emerald, white. Glossy evergreen with fragrant blossom and real lemons on a patio. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Meyer Lemon (cultivar ‘Improved Meyer’), Citrus ×meyeri, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Glossy evergreen with fragrant blossom and real lemons on a patio. Key colours: gold, emerald, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "gomphrena",
+      "commonName": "Globe Amaranth",
+      "cultivar": "Truffula Pink",
+      "botanicalName": "Gomphrena globosa",
+      "role": "thrill",
+      "allRoles": [
+        "fill",
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "medium",
+      "interest": [
+        "flower"
+      ],
+      "colors": [
+        "rose",
+        "violet",
+        "white"
+      ],
+      "colorNames": [
+        "Rose",
+        "Violet",
+        "White"
+      ],
+      "bloomMonths": [
+        6,
+        10
+      ],
+      "hardyZone": 10,
+      "feature": "Papery clover-like globes on wiry stems; loves heat and dries beautifully.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Globe Amaranth (cultivar ‘Truffula Pink’), Gomphrena globosa: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, violet, white. Papery clover-like globes on wiry stems; loves heat and dries beautifully. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Globe Amaranth (cultivar ‘Truffula Pink’), Gomphrena globosa, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Papery clover-like globes on wiry stems; loves heat and dries beautifully. Key colours: rose, violet, white. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    },
+    {
+      "id": "sedum",
+      "commonName": "Sedum",
+      "cultivar": "Autumn Joy",
+      "botanicalName": "Hylotelephium spectabile",
+      "role": "thrill",
+      "allRoles": [
+        "fill",
+        "thrill"
+      ],
+      "light": [
+        "sun"
+      ],
+      "water": "low",
+      "vigor": "low",
+      "interest": [
+        "flower",
+        "foliage"
+      ],
+      "colors": [
+        "rose",
+        "sage"
+      ],
+      "colorNames": [
+        "Rose",
+        "Sage"
+      ],
+      "bloomMonths": [
+        8,
+        10
+      ],
+      "hardyZone": 3,
+      "feature": "Fleshy blue-green rosettes rising to dusty-rose domes that feed late bees.",
+      "containerDone": false,
+      "catalogPrompt": "Flat, painterly seed-packet illustration of Sedum (cultivar ‘Autumn Joy’), Hylotelephium spectabile: a single hero bloom of the plant, bold and simplified, soft gouache-and-coloured-pencil texture, saturated yet gentle colour. Key colours: rose, sage. Fleshy blue-green rosettes rising to dusty-rose domes that feed late bees. Centred with margin on a FULLY TRANSPARENT background — no circle, no pot, no text, no shadow. Iconic and decorative.",
+      "containerPrompt": "Naturalistic botanical field-guide illustration of Sedum (cultivar ‘Autumn Joy’), Hylotelephium spectabile, shown as a upright \"thriller\" — tall and vertical, height-giving, distinctly taller than wide. Fleshy blue-green rosettes rising to dusty-rose domes that feed late bees. Key colours: rose, sage. Single whole plant, soft realistic shading and fine veining, head-on side view, vertically centred with margin, on a FULLY TRANSPARENT background — no pot, no soil, no ground, no text, no shadow."
+    }
+  ]
+}
