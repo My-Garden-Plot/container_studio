@@ -27,6 +27,7 @@
  *
  * Flags:
  *   --all                generate every plant in the catalogue
+ *   --variants           one image per colour (skips a plant's combined art)
  *   --quality <q>        low | medium | high   (default: medium)
  *   --kind <k>           both | catalog | container   (default: both)
  *   --force              regenerate even if the PNG already exists
@@ -71,6 +72,7 @@ function parseArgs(argv) {
   const opts = {
     ids: [],
     all: false,
+    variants: false,
     quality: process.env.ART_QUALITY || 'medium',
     kind: 'both',
     force: false,
@@ -84,6 +86,7 @@ function parseArgs(argv) {
     const a = argv[i];
     switch (a) {
       case '--all': opts.all = true; break;
+      case '--variants': opts.variants = true; break;
       case '--force': opts.force = true; break;
       case '--no-trim': opts.trim = false; break;
       case '--dry-run': opts.dryRun = true; break;
@@ -137,6 +140,35 @@ function designDimensions(kind, role, pxW, pxH) {
   return { w: Math.round(h * aspect), h };
 }
 
+/** Filename-safe token for a colour ("Burgundy" -> "burgundy"). */
+function slug(s) {
+  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Expand a plant into the output variants to generate.
+ *  - variants mode + >1 colour -> one entry per colour ("<id>-<colour>"),
+ *    each carrying the single colour name so the prompt can be narrowed.
+ *  - otherwise -> the plant's combined art under its plain id.
+ */
+function variantsFor(plant, useVariants) {
+  const colors = plant.colors || [];
+  const names = plant.colorNames || [];
+  if (useVariants && colors.length > 1) {
+    return colors.map((tok, i) => ({
+      outId: `${plant.id}-${slug(tok)}`,
+      colorName: names[i] || tok,
+    }));
+  }
+  return [{ outId: plant.id, colorName: null }];
+}
+
+/** Narrow a prompt's "Key colours: a, b, c." clause to a single colour. */
+function colorizePrompt(prompt, colorName) {
+  if (!colorName) return prompt;
+  return prompt.replace(/Key colours?:[^.]*\./, `Key colour: ${colorName}.`);
+}
+
 /** Generate a single image with a couple of retries on transient errors. */
 async function generateImage(client, { prompt, size, quality, model }) {
   let lastErr;
@@ -179,6 +211,7 @@ const HELP = `The Container Studio — art generator
 
 Flags:
   --all                every plant in the catalogue
+  --variants           one image per colour (skips a plant's combined art)
   --quality <q>        low | medium | high            (default: medium)
   --kind <k>           both | catalog | container      (default: both)
   --force              regenerate even if the PNG exists
@@ -216,22 +249,26 @@ async function main() {
   // Build the work list (one item per image), respecting --force.
   const jobs = [];
   for (const plant of plants) {
-    for (const kind of kinds) {
-      const dir = kind === 'catalog' ? 'catalog' : 'plants';
-      const rel = `${dir}/${plant.id}.png`;
-      const abs = path.join(opts.out, rel);
-      if (!opts.force && existsSync(abs)) {
-        console.log(`= skip  ${rel} (exists; use --force to redo)`);
-        continue;
+    for (const variant of variantsFor(plant, opts.variants)) {
+      for (const kind of kinds) {
+        const dir = kind === 'catalog' ? 'catalog' : 'plants';
+        const rel = `${dir}/${variant.outId}.png`;
+        const abs = path.join(opts.out, rel);
+        if (!opts.force && existsSync(abs)) {
+          console.log(`= skip  ${rel} (exists; use --force to redo)`);
+          continue;
+        }
+        const basePrompt = kind === 'catalog' ? plant.catalogPrompt : plant.containerPrompt;
+        jobs.push({
+          plant,
+          kind,
+          rel,
+          abs,
+          outId: variant.outId,
+          prompt: colorizePrompt(basePrompt, variant.colorName),
+          size: SIZE[kind],
+        });
       }
-      jobs.push({
-        plant,
-        kind,
-        rel,
-        abs,
-        prompt: kind === 'catalog' ? plant.catalogPrompt : plant.containerPrompt,
-        size: SIZE[kind],
-      });
     }
   }
 
@@ -266,7 +303,7 @@ async function main() {
   async function worker() {
     while (cursor < jobs.length) {
       const job = jobs[cursor++];
-      const label = `${job.plant.id} ${job.kind}`;
+      const label = `${job.outId} ${job.kind}`;
       try {
         console.log(`> ${label} …`);
         let buf = await generateImage(client, {
@@ -277,8 +314,8 @@ async function main() {
 
         const meta = await sharp(buf).metadata();
         const { w, h } = designDimensions(job.kind, job.plant.role, meta.width, meta.height);
-        manifest[job.plant.id] ??= {};
-        manifest[job.plant.id][job.kind] = {
+        manifest[job.outId] ??= {};
+        manifest[job.outId][job.kind] = {
           href: job.rel, w, h, px: { w: meta.width, h: meta.height },
         };
         done++;

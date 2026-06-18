@@ -279,6 +279,66 @@
       }
     }
   },
+  "coleus-burgundy": {
+    "catalog": {
+      "href": "catalog/coleus-burgundy.png",
+      "w": 83,
+      "h": 120,
+      "px": {
+        "w": 722,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/coleus-burgundy.png",
+      "w": 139,
+      "h": 150,
+      "px": {
+        "w": 904,
+        "h": 979
+      }
+    }
+  },
+  "coleus-lime": {
+    "catalog": {
+      "href": "catalog/coleus-lime.png",
+      "w": 84,
+      "h": 120,
+      "px": {
+        "w": 699,
+        "h": 999
+      }
+    },
+    "container": {
+      "href": "plants/coleus-lime.png",
+      "w": 136,
+      "h": 150,
+      "px": {
+        "w": 857,
+        "h": 942
+      }
+    }
+  },
+  "coleus-rose": {
+    "catalog": {
+      "href": "catalog/coleus-rose.png",
+      "w": 88,
+      "h": 120,
+      "px": {
+        "w": 677,
+        "h": 928
+      }
+    },
+    "container": {
+      "href": "plants/coleus-rose.png",
+      "w": 119,
+      "h": 150,
+      "px": {
+        "w": 925,
+        "h": 1167
+      }
+    }
+  },
   "cordyline": {
     "catalog": {
       "href": "catalog/cordyline.png",
@@ -739,6 +799,66 @@
       }
     }
   },
+  "lantana-coral": {
+    "catalog": {
+      "href": "catalog/lantana-coral.png",
+      "w": 89,
+      "h": 120,
+      "px": {
+        "w": 704,
+        "h": 946
+      }
+    },
+    "container": {
+      "href": "plants/lantana-coral.png",
+      "w": 73,
+      "h": 175,
+      "px": {
+        "w": 628,
+        "h": 1512
+      }
+    }
+  },
+  "lantana-gold": {
+    "catalog": {
+      "href": "catalog/lantana-gold.png",
+      "w": 111,
+      "h": 120,
+      "px": {
+        "w": 837,
+        "h": 905
+      }
+    },
+    "container": {
+      "href": "plants/lantana-gold.png",
+      "w": 91,
+      "h": 175,
+      "px": {
+        "w": 745,
+        "h": 1440
+      }
+    }
+  },
+  "lantana-rose": {
+    "catalog": {
+      "href": "catalog/lantana-rose.png",
+      "w": 103,
+      "h": 120,
+      "px": {
+        "w": 771,
+        "h": 894
+      }
+    },
+    "container": {
+      "href": "plants/lantana-rose.png",
+      "w": 86,
+      "h": 175,
+      "px": {
+        "w": 694,
+        "h": 1420
+      }
+    }
+  },
   "lavender": {
     "catalog": {
       "href": "catalog/lavender.png",
@@ -976,6 +1096,66 @@
       "px": {
         "w": 810,
         "h": 1466
+      }
+    }
+  },
+  "petunia-rose": {
+    "catalog": {
+      "href": "catalog/petunia-rose.png",
+      "w": 94,
+      "h": 120,
+      "px": {
+        "w": 777,
+        "h": 994
+      }
+    },
+    "container": {
+      "href": "plants/petunia-rose.png",
+      "w": 93,
+      "h": 175,
+      "px": {
+        "w": 759,
+        "h": 1422
+      }
+    }
+  },
+  "petunia-violet": {
+    "catalog": {
+      "href": "catalog/petunia-violet.png",
+      "w": 112,
+      "h": 120,
+      "px": {
+        "w": 833,
+        "h": 892
+      }
+    },
+    "container": {
+      "href": "plants/petunia-violet.png",
+      "w": 92,
+      "h": 175,
+      "px": {
+        "w": 739,
+        "h": 1410
+      }
+    }
+  },
+  "petunia-white": {
+    "catalog": {
+      "href": "catalog/petunia-white.png",
+      "w": 120,
+      "h": 120,
+      "px": {
+        "w": 1044,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/petunia-white.png",
+      "w": 79,
+      "h": 175,
+      "px": {
+        "w": 642,
+        "h": 1422
       }
     }
   },
