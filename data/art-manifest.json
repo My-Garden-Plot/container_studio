@@ -1,0 +1,62 @@
+{
+  "canna": {
+    "catalog": {
+      "href": "catalog/canna.png",
+      "w": 120,
+      "h": 120,
+      "px": {
+        "w": 1043,
+        "h": 1044
+      }
+    },
+    "container": {
+      "href": "plants/canna.png",
+      "w": 84,
+      "h": 200,
+      "px": {
+        "w": 610,
+        "h": 1446
+      }
+    }
+  },
+  "coleus": {
+    "catalog": {
+      "href": "catalog/coleus.png",
+      "w": 85,
+      "h": 120,
+      "px": {
+        "w": 644,
+        "h": 914
+      }
+    },
+    "container": {
+      "href": "plants/coleus.png",
+      "w": 155,
+      "h": 150,
+      "px": {
+        "w": 837,
+        "h": 808
+      }
+    }
+  },
+  "petunia": {
+    "catalog": {
+      "href": "catalog/petunia.png",
+      "w": 100,
+      "h": 120,
+      "px": {
+        "w": 814,
+        "h": 979
+      }
+    },
+    "container": {
+      "href": "plants/petunia.png",
+      "w": 97,
+      "h": 175,
+      "px": {
+        "w": 810,
+        "h": 1466
+      }
+    }
+  }
+}
